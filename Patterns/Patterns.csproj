@@ -42,6 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Command\CommandBase.cs" />
+    <Compile Include="Command\Invoker.cs" />
+    <Compile Include="Command\MyCommand.cs" />
+    <Compile Include="Command\Receiver.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
