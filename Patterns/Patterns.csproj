@@ -42,12 +42,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Command\CommandBase.cs" />
-    <Compile Include="Command\Invoker.cs" />
-    <Compile Include="Command\MyCommand.cs" />
-    <Compile Include="Command\Receiver.cs" />
+    <Compile Include="Command\ICommand.cs" />
+    <Compile Include="Command\LightReceiver.cs" />
+    <Compile Include="Command\SwitchInvoker.cs" />
+    <Compile Include="Command\SwitchCommands.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SimpleCommand\SimpleCommand.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -6,13 +6,8 @@ using System.Threading.Tasks;
 
 namespace Patterns.Command
 {
-    public class Receiver
+    public interface ICommand
     {
-
-        public void Action()
-        {
-            Console.WriteLine("Action happend");
-        }
-
+        void Execute();
     }
 }
