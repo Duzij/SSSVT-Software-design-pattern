@@ -11,8 +11,6 @@ namespace Patterns.Builder
         void BuildPart1();
         void BuildPart2();
         void BuildPart3();
-
-        Pizza GetResult();
-
+        void GetResult();
     }
 }

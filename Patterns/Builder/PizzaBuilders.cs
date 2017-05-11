@@ -8,7 +8,7 @@ namespace Patterns.Builder
 {
     public class SunkaSyrPizzaBuilder : IBuilder
     {
-        public Pizza Product { get; set; }
+        public Pizza Product { get; set; } = new Pizza();
         public void BuildPart1()
         {
             Product.Part1 = "těsto";
@@ -24,15 +24,16 @@ namespace Patterns.Builder
             Product.Part3 = "syr";
         }
 
-        public Pizza GetResult()
+        public void GetResult()
         {
-            return Product;
+            Console.WriteLine($"We just made {Product.Part1}, {Product.Part2}, {Product.Part3}");
         }
+    
     }
 
     public class FereronkyPizzaBuilder : IBuilder
     {
-        public Pizza Product { get; set; }
+        public Pizza Product { get; set; } = new Pizza();
         public void BuildPart1()
         {
             Product.Part1 = "těsto";
@@ -47,10 +48,9 @@ namespace Patterns.Builder
         {
             Product.Part3 = " ";
         }
-
-        public Pizza GetResult()
+        public void GetResult()
         {
-            return Product;
+            Console.WriteLine($"We just made {Product.Part1}, {Product.Part2}, {Product.Part3}");
         }
     }
 }

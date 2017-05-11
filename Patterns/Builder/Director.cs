@@ -8,11 +8,12 @@ namespace Patterns.Builder
 {
     public class Director 
     {
-        public void Construct(IBuilder biulder)
+        public void Construct(IBuilder builder)
         {
-            biulder.BuildPart1();
-            biulder.BuildPart2();
-            biulder.BuildPart3();
+            builder.BuildPart1();
+            builder.BuildPart2();
+            builder.BuildPart3();
+            builder.GetResult();
         }
     }
 }

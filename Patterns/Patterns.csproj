@@ -50,9 +50,16 @@
     <Compile Include="Command\LightReceiver.cs" />
     <Compile Include="Command\SwitchInvoker.cs" />
     <Compile Include="Command\SwitchCommands.cs" />
+    <Compile Include="Observer\IObserver.cs" />
+    <Compile Include="Observer\MySubject.cs" />
+    <Compile Include="Observer\SubjectBase.cs" />
+    <Compile Include="Observer\MyObserver.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SimpleCommand\SimpleCommand.cs" />
+    <Compile Include="TemplateMethod\HtmlDocument.cs" />
+    <Compile Include="TemplateMethod\TemplateMethodBase.cs" />
+    <Compile Include="TemplateMethod\XmlDocument.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -1,5 +1,7 @@
 ﻿using Patterns.Builder;
 using Patterns.Command;
+using Patterns.Observer;
+using Patterns.TemplateMethod;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,11 +15,12 @@ namespace Patterns
         static void Main(string[] args)
         {
             //COMMAND
-            //Jde o to, že receiver a invoker o sobě neví a nijak nekoledují.
+            //Jde o to, že máme receiver a invoker a ty sobě neví a nijak nekoledují.
+            //Invoker inkoukuje kommandy a má taktéž list komandů, které už ví, na kterém Receiveru se mají spustit (předá se jím to v konstruktoru)
             //To nám dává možnost skladovat nebo přehazovat commandy
             //Příklad je zapínání a vypínání světla
 
-            //Dá se to implementovat jak přes interface, tak i před abstraktní klasu, kde budeme taktéž mít náš reciver (každý command ve fináli ví, kde se spustí)
+            //Dá se to implementovat jak přes interface, tak i před abstraktní klasu, kde budeme taktéž mít náš reciver (každý command ví, kde se spustí)
 
             LightReceiver R = new LightReceiver();
             SwitchInvoker I = new SwitchInvoker();
@@ -46,6 +49,30 @@ namespace Patterns
             Director.Construct(b);
 
 
+            Console.ReadKey();
+
+            //OBSERVER
+            //Máme nějaký subject o který se strašně zajímají obseveři. Pokaždé, když se na subjectu změní jeho properta State, všichni Observeři se o tom dozví
+
+            MySubject sub = new MySubject();
+            sub.Attach(new MyObserver(sub));
+            sub.Attach(new MyObserver(sub));
+
+            sub.SetState("změna");
+
+            Console.ReadKey();
+
+
+            //TEMPLATE METHOD
+            //máme dvě klásy, co se chovají strašně podobně, ale přece jsou rozdílné
+
+            HtmlDocument html = new HtmlDocument();
+            XmlDocument xml = new XmlDocument();
+
+            html.TemplateMethod();
+            xml.TemplateMethod();
+
+            Console.ReadKey();
         }
     }
 }
