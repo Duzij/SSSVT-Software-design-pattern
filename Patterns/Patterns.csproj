@@ -50,6 +50,9 @@
     <Compile Include="Command\LightReceiver.cs" />
     <Compile Include="Command\SwitchInvoker.cs" />
     <Compile Include="Command\SwitchCommands.cs" />
+    <Compile Include="FactoryMethod\IFactory.cs" />
+    <Compile Include="FactoryMethod\IProductFactory.cs" />
+    <Compile Include="FactoryMethod\MyVehicleFactory.cs" />
     <Compile Include="Observer\IObserver.cs" />
     <Compile Include="Observer\MySubject.cs" />
     <Compile Include="Observer\SubjectBase.cs" />

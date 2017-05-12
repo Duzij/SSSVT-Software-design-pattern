@@ -1,5 +1,6 @@
 ﻿using Patterns.Builder;
 using Patterns.Command;
+using Patterns.FactoryMethod;
 using Patterns.Observer;
 using Patterns.TemplateMethod;
 using System;
@@ -71,6 +72,15 @@ namespace Patterns
 
             html.TemplateMethod();
             xml.TemplateMethod();
+
+            Console.ReadKey();
+
+            //FACTORY METHOD
+            //tento návrhový style se hodí, když máme objekty, o kterých nevíme, jak se mají vytvořit
+
+            MyVehicleFactory factory = new MyVehicleFactory();
+            factory.CreateProduct("Product1").Action();
+            factory.CreateProduct("Product2").Action();
 
             Console.ReadKey();
         }
